@@ -1,6 +1,6 @@
 # Oak — Library Management System
 
-Oak is a full-stack library management platform that has successfully transitioned from a legacy local desktop application built with JavaFX and OCSF (Object Client-Server Framework) to a modern, cloud-hosted web architecture. It streamlines book inventory, borrowing workflows, member tracking, waitlists, and librarian administrative operations.
+Oak is a full-stack library management platform that has successfully transitioned from a legacy local desktop application built with JavaFX and OCSF (Object Client-Server Framework) as a college course project, to a modern, cloud-hosted web architecture. It streamlines book inventory, borrowing workflows, member tracking, waitlists, and librarian administrative operations.
 
 🌐 **Live Application:** [https://oak-library-management-system.vercel.app](https://oak-library-management-system.vercel.app)
 
@@ -26,15 +26,27 @@ Oak is a full-stack library management platform that has successfully transition
 
 ---
 
+## Visual Showcase
+
+Explore core workflows for both user types:
+
+### Member Experience
+![Member Showcase](frontend/public/videos/showcase/member.gif)
+
+### Librarian Experience
+![Librarian Showcase](frontend/public/videos/showcase/librarian.gif)
+
+---
+
 ## Architecture & Tech Stack
 
-### Frontend (`/frontend`)
+### Frontend
 - **Framework:** React 19 with TypeScript & Vite
 - **Styling:** Tailwind CSS, PostCSS
 - **Routing & Visualization:** React Router DOM, Recharts
-- **Hosting:** Vercel ([oak-library-management-system.vercel.app](https://oak-library-management-system.vercel.app))
+- **Hosting:** Vercel
 
-### Backend (`/src/main/java`)
+### Backend
 - **Framework:** Spring Boot 3 (Java 17) with Jakarta EE (Mail, Activation)
 - **API:** RESTful architecture with JSON mapping (Jackson)
 - **Build Tool:** Maven
@@ -43,6 +55,12 @@ Oak is a full-stack library management platform that has successfully transition
 ### Database
 - **Database Engine:** MySQL 8
 - **Cloud Provider:** Aiven Managed Database
+
+---
+
+## Agent Skills & UI Tooling
+
+The project incorporates UI design and polish skills by Jakub Krehel ([github.com/jakubkrehel/skills](https://github.com/jakubkrehel/skills.git)) located under `.agents/skills/` to guide high-fidelity interface design, typography, spacing, state management, window-size responsiveness and, component resilience.
 
 ---
 
