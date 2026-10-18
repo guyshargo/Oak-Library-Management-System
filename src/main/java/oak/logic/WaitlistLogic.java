@@ -79,7 +79,7 @@ public class WaitlistLogic {
     }
 
     public synchronized boolean leaveWaitlist(int waitlistId) {
-        String query = "UPDATE waitlist SET status = 'CANCELLED' WHERE waitlist_id = ?";
+        String query = "DELETE FROM waitlist WHERE waitlist_id = ?";
         try (Connection conn = dbConnector.getConnection();
              PreparedStatement ps = conn.prepareStatement(query)) {
             ps.setInt(1, waitlistId);
