@@ -6,7 +6,6 @@ import SearchModal from '../common/SearchModal';
 import DropdownOption from '../ui/DropdownOption';
 import BrowseIcon from '../ui/BrowseIcon';
 import { librarianLinks, memberLinks } from '../../config/navigationConfig';
-import logoImg from '../../../public/images/layout/logo.png';
 
 const Layout: React.FC = () => {
     const navigate = useNavigate();
@@ -88,7 +87,7 @@ const Layout: React.FC = () => {
                             to="/home" 
                             className="flex shrink-0 items-center focus:outline-none transition-opacity" onClick={() => navigate('/home')}
                         >
-                            <img src={logoImg} alt="Oak Library Logo" className="block h-16 sm:h-20 w-auto object-contain" />
+                            <img src={"/images/layout/logo.png"} alt="Oak Library Logo" className="block h-16 sm:h-20 w-auto object-contain" />
                         </Link>
 
                         {/* Desktop Nav Items Group (My Books & Browse) */}
