@@ -1,19 +1,68 @@
-# Blib — Library Management System
+# Oak — Library Management System
 
-Blib is a full-stack library platform for managing book inventory, borrowing, member records, and librarian workflows. The project has moved from the legacy desktop/client-server approach to a modern web-based architecture centered on a Spring Boot backend and a React frontend.
+Oak is a full-stack library management platform that has successfully transitioned from a legacy local desktop application built with JavaFX and OCSF (Object Client-Server Framework) to a modern, cloud-hosted web architecture. It streamlines book inventory, borrowing workflows, member tracking, waitlists, and librarian administrative operations.
 
-## Current project stage
-The repository is currently in an active modernization and integration phase:
+🌐 **Live Application:** [https://oak-library-management-system.vercel.app](https://oak-library-management-system.vercel.app)
 
-- The backend is built as a Spring Boot REST API and exposes endpoints for authentication, catalog browsing, member management, borrowing, returns, reports, and invoice activity.
-- The frontend is implemented in React with Vite and includes dedicated pages for catalog browsing, member login, librarian dashboards, borrow/return flows, and reports.
-- The remaining focus is on final API/frontend wiring, validation, and polishing the user experience.
+---
 
-## Tech stack
-- Backend: Java 17, Spring Boot 3, REST APIs, Maven
-- Frontend: React 19, TypeScript, Vite, React Router
-- Database: MySQL 8
-- UI: Tailwind CSS
+## Key Features
 
-## Project status
-Blib is currently in an active web migration and feature-completion phase. The modern Spring Boot + React stack is in place, the core domain flows are present, and the project is being refined toward a fully integrated library-management application.
+### Catalog & Discovery
+- **Library Explorer & Search:** Browse books by title, author, ID, or subject/genre.
+- **Trending & Recommendations:** Discover popular books and new arrivals.
+- **Detailed Book Views:** Real-time stock availability, copy status, and description details.
+
+### Member Portal
+- **Authentication & Profiles:** Secure login and personalized member dashboard.
+- **My Books:** Track currently borrowed books, due dates, borrow history, and activity logs.
+- **Waitlists & Orders:** Place orders and join waitlists for checked-out titles.
+
+### Librarian Operations
+- **Borrow & Return Management:** Streamlined workflow for issuing books and processing returns.
+- **Member Management:** Register new members, view and update member status, and manage account details.
+- **Invoices & Communications:** Manage and track member inquiries, system notifications, and account messages.
+- **Reporting & Analytics:** Advanced visual reports and charts (Recharts) tracking library metrics, borrowing trends, and inventory statistics.
+
+---
+
+## Architecture & Tech Stack
+
+### Frontend (`/frontend`)
+- **Framework:** React 19 with TypeScript & Vite
+- **Styling:** Tailwind CSS, PostCSS
+- **Routing & Visualization:** React Router DOM, Recharts
+- **Hosting:** Vercel ([oak-library-management-system.vercel.app](https://oak-library-management-system.vercel.app))
+
+### Backend (`/src/main/java`)
+- **Framework:** Spring Boot 3 (Java 17) with Jakarta EE (Mail, Activation)
+- **API:** RESTful architecture with JSON mapping (Jackson)
+- **Build Tool:** Maven
+- **Hosting:** Render Cloud Services
+
+### Database
+- **Database Engine:** MySQL 8
+- **Cloud Provider:** Aiven Managed Database
+
+---
+
+## Local Development & Setup
+
+### Prerequisites
+- Java 17+ & Maven
+- Node.js (v18+) & npm
+- MySQL 8 compatible database
+
+### 1. Database Configuration
+Configure your MySQL connection properties in `src/main/resources/` or environment variables pointing to your database instance (e.g., Aiven).
+
+### 2. Run Backend
+```bash
+mvn clean spring-boot:run
+```
+
+### 3. Run Frontend
+```cd frontend
+npm install
+npm run dev
+```

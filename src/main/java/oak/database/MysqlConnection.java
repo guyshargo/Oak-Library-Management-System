@@ -20,7 +20,7 @@ public class MysqlConnection {
         try (FileInputStream fis = new FileInputStream(".env")) {
             envProperties.load(fis);
         } catch (IOException ex) {
-            System.out.println("Warning: Could not load .env file. Falling back to default credentials.");
+            System.out.println("Local .env file not found. Extracting database credentials from system environment variables.");
         }
         
         try {
