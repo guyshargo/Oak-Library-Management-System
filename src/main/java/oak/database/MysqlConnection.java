@@ -42,9 +42,9 @@ public class MysqlConnection {
 
     public Connection getConnection() {
         try {
-            String url = envProperties.getProperty("DB_URL");
-            String user = envProperties.getProperty("DB_USER");
-            String password = envProperties.getProperty("DB_PASSWORD");
+            String url = System.getenv("DB_URL") != null ? System.getenv("DB_URL") : envProperties.getProperty("DB_URL", "jdbc:mysql://localhost:3306/oak?serverTimezone=Asia/Jerusalem");
+            String user = System.getenv("DB_USER") != null ? System.getenv("DB_USER") : envProperties.getProperty("DB_USER", "root");
+            String password = System.getenv("DB_PASSWORD") != null ? System.getenv("DB_PASSWORD") : envProperties.getProperty("DB_PASSWORD", "Aa123456");
             
             // Return a fresh connection every time to prevent cross-thread closures
             return DriverManager.getConnection(url, user, password);
